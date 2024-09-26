@@ -1,0 +1,36 @@
+name: Pull Docker Image Cron Job
+
+# Runs every 12 hours using a cron schedule
+on:
+  schedule:
+    - cron: "0 */12 * * *"  # Every 12 hours
+
+jobs:
+  pull-docker-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Pull Docker Image and log status
+        run: |
+          IMAGE_NAME="suriya08/sqlite3:1.0.1"
+          LOG_FILE="docker_pull.log"
+
+          # Pulling Docker image and logging the status
+          echo "Pulling Docker image: $IMAGE_NAME" >> $LOG_FILE
+          docker pull $IMAGE_NAME >> $LOG_FILE 2>&1
+          if [ $? -eq 0 ]; then
+            echo "$(date): Docker image $IMAGE_NAME pulled successfully." >> $LOG_FILE
+          else
+            echo "$(date): Failed to pull Docker image $IMAGE_NAME." >> $LOG_FILE
+          fi
+
+      - name: Commit log file
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add docker_pull.log
+          git commit -m "Update Docker pull log"
+          git push
