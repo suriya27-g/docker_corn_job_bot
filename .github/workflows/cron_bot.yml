@@ -3,7 +3,7 @@ name: Pull Docker Image Cron Job
 # Runs every 12 hours using a cron schedule
 on:
   schedule:
-    - cron: "0 */12 * * *"  # Every 12 hours
+    - cron: "0 */5 * * *"  # Every 12 hours
   workflow_dispatch:
 
 jobs:
