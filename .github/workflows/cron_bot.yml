@@ -16,7 +16,7 @@ jobs:
 
       - name: Pull Docker Image and log status
         run: |
-          IMAGE_NAME="suriya08/sqlite3:1.0.1"
+          IMAGE_NAME="suriya08/sqlite3:1.0.2"
           LOG_FILE="docker_pull.log"
 
           # Pulling Docker image and logging the status
