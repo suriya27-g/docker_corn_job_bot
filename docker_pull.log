@@ -376,3 +376,20 @@ Digest: sha256:f65d77d96b975741bb1472714f5c43b067477a0688805779d14564cd36612d33
 Status: Downloaded newer image for suriya08/sqlite3:1.0.3
 docker.io/suriya08/sqlite3:1.0.3
 Fri Nov  8 18:21:39 UTC 2024: Docker image suriya08/sqlite3:1.0.3 pulled successfully.
+Pulling Docker image: suriya08/sqlite3:1.0.3
+1.0.3: Pulling from suriya08/sqlite3
+2a9ba26b295d: Pulling fs layer
+72c619c7cd6e: Pulling fs layer
+a49929918a8b: Pulling fs layer
+a49929918a8b: Verifying Checksum
+a49929918a8b: Download complete
+72c619c7cd6e: Verifying Checksum
+72c619c7cd6e: Download complete
+2a9ba26b295d: Download complete
+2a9ba26b295d: Pull complete
+72c619c7cd6e: Pull complete
+a49929918a8b: Pull complete
+Digest: sha256:f65d77d96b975741bb1472714f5c43b067477a0688805779d14564cd36612d33
+Status: Downloaded newer image for suriya08/sqlite3:1.0.3
+docker.io/suriya08/sqlite3:1.0.3
+Sat Nov  9 01:13:29 UTC 2024: Docker image suriya08/sqlite3:1.0.3 pulled successfully.
